@@ -82,7 +82,7 @@ separador()
 
 #l
 
-inteligencia = contador_lista(mapear_lista(lambda hero : hero["inteligencia"],lista_personajes),"inteligencia")
+inteligencia = contador_lista(mapear_lista(lambda hero : hero["inteligencia"] if hero["inteligencia"] else "no tiene",lista_personajes),"inteligencia")
 
 print(f"Lista inteligencia: \n {inteligencia} ")
 separador()
@@ -104,7 +104,7 @@ separador()
 
 #O
 
-lista_por_inteligencia_mapeo = mapear_lista(lambda hero : hero["inteligencia"],lista_personajes)
+lista_por_inteligencia_mapeo = mapear_lista(lambda hero : hero["inteligencia"] ,lista_personajes)
 lista_por_inteligencia = enlistar(lista_por_inteligencia_mapeo,"inteligencia","nombre")
 
 print(f"Lista por inteligencia: \n  {lista_por_inteligencia}")
